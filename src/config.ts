@@ -1,6 +1,7 @@
 import { Api, JsonRpc } from 'eosjs';
 import { JsSignatureProvider } from 'eosjs/dist/eosjs-jssig';
 import { Authorization } from "eosjs/dist/eosjs-serialize";
+import fetch from "isomorphic-fetch";
 const { TextEncoder, TextDecoder } = require('util');
 require("dotenv").config();
 
@@ -10,7 +11,7 @@ if (!process.env.ACCOUNT) throw new Error("ACCOUNT is required");
 if (!process.env.PERMISSION) throw new Error("PERMISSION is required");
 
 const signatureProvider = new JsSignatureProvider(process.env.PRIVATE_KEYS.split(","));
-export const rpc = new JsonRpc(process.env.NODEOS_ENDPOINT, { fetch: require('node-fetch') });
+export const rpc = new JsonRpc(process.env.NODEOS_ENDPOINT, { fetch });
 export const api = new Api({ rpc, signatureProvider, textDecoder: new TextDecoder(), textEncoder: new TextEncoder() });
 
 // settings

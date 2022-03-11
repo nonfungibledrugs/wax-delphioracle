@@ -2,6 +2,7 @@
   "private": true,
   "name": "wax.delphioracle",
   "version": "0.1.0",
+  "module": "node",
   "description": "WAX Delphi Oracle price feed",
   "main": "index.js",
   "author": "Denis Carriere",
@@ -19,6 +20,6 @@
     "cron": "*",
     "dotenv": "*",
     "eosjs": "^21.0.1-rc1",
-    "node-fetch": "*"
+    "isomorphic-fetch": "*"
   }
 }
