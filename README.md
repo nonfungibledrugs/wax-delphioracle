@@ -9,7 +9,7 @@
 ## `.env` settings
 
 ```bash
-NODEOS_ENDPOINT="https://wax.eosn.com"
+NODEOS_ENDPOINT="https://wax.api.eosnation.io"
 PRIVATE_KEYS="<PRIVATE KEY>"
 ACCOUNT="<ACCOUNT>"
 PERMISSION="<PERMISSION>"
