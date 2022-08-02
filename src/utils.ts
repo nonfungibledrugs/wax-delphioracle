@@ -6,6 +6,7 @@ import { Action } from "eosjs/dist/eosjs-serialize";
  */
 export async function transact(api: Api, actions: Action[]): Promise<string> {
     let trx_id: string;
+
     try {
         const result = await api.transact({actions}, { blocksBehind: 3, expireSeconds: 30 });
         trx_id = result.transaction_id;

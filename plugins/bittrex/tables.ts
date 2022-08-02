@@ -12,8 +12,3 @@ export async function get_ticker( ticker: string ): Promise<Ticker> {
     const response = await fetch( url );
     return response.json();
 }
-
-// (async () => {
-//     const foo = await get_ticker("WAXP-BTC")
-//     console.log(foo);
-// })()
